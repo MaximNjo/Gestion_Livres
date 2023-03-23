@@ -30,13 +30,13 @@ namespace Gestion_Livres
 
         public int Cardinal()
         {
-            return Bibliotheque.c;
+            return Bibliotheque.ca;
         }
 
         public override string ToString()
         {
             string maChaine = "";
-            maChaine = maChaine + "La Bibliotheque :" + this.nom + "contient les livres suivants : ";
+            maChaine = maChaine + "La Bibliotheque : " + this.nom + " contient les livres suivants : ";
             foreach (Livre I in Bibliothèque)
             {
                 maChaine += I + " ";
@@ -83,7 +83,6 @@ namespace Gestion_Livres
 
 
         }
-
 
 
         public Boolean SupprimerLivre(string titre)

@@ -26,7 +26,7 @@ class Program
             bi.SupprimerLivre("Desert");
             Console.WriteLine(bi);
             Console.ReadKey();
-            bi.SupprimeAuteur("Victor Hugo");
+            bi.SupprimerAuteur("Victor Hugo");
             Console.WriteLine(bi);
             Console.ReadKey();
         }
