@@ -29,7 +29,12 @@ class Program
             bi.SupprimerAuteur("Victor Hugo");
             Console.WriteLine(bi);
             Console.ReadKey();
+
+          
+
         }
+
+
     }
 
 

@@ -30,7 +30,7 @@ namespace Gestion_Livres
 
         public int Cardinal()
         {
-            return Bibliotheque.c;
+            return Bibliotheque.cardinal;
         }
 
         public override string ToString()
