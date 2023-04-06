@@ -8,7 +8,7 @@ namespace Gestion_Livres
 {
     class Bibliotheque
     {
-        List<Livre> Bibliothèque = new List <Livre>();
+        List<Livre> lesLivres = new List <Livre>();
         private string nom;
         private string t;
         private Livre i;
@@ -18,7 +18,7 @@ namespace Gestion_Livres
         private string aut;
         private string ajout;
 
-
+        
         public string Nom { get => nom; set => nom = value; }
         public string T { get => t; set => t = value; }
         internal Livre I { get => i; set => i = value; }
@@ -30,18 +30,7 @@ namespace Gestion_Livres
 
         public int Cardinal()
         {
-            return Bibliotheque.cardinal;
-        }
-
-        public override string ToString()
-        {
-            string maChaine = "";
-            maChaine = maChaine + "La Bibliotheque : " + this.nom + " contient les livres suivants : ";
-            foreach (Livre I in Bibliothèque)
-            {
-                maChaine += I + " ";
-            }
-            return maChaine;
+            return lesLivres.Count;
         }
 
         public Bibliotheque(string nom)
@@ -51,7 +40,7 @@ namespace Gestion_Livres
 
         public Livre LivreExiste(string t)
         {
-            foreach (Livre j in Bibliothèque)
+            foreach (Livre j in lesLivres)
             {
                 if (j.Titre == t)
                 {
@@ -61,29 +50,32 @@ namespace Gestion_Livres
             return null;
         }
 
+        public override string ToString()
+        {
+            string maChaine = "";
+            maChaine = maChaine + "La Bibliotheque : " + this.nom + " contient les livres suivants : ";
+            foreach (Livre I in lesLivres)
+            {
+                maChaine += I + " ";
+            }
+            return maChaine;
+        }
+
+
         public void AjouterLivre(Livre i)
         {
             Bibliotheque.ReferenceEquals(i, this);
         }
 
-        public void AfficheAuteur(string a)
+        public void AfficheParAuteur(string a)
         {
             this.a = a;
         }
 
-        public void AfficheEditeur(string e)
+        public void AfficheParEditeur(string e)
         {
             this.e = e;
         }
-
-        public Boolean SupprimerAuteur(string aut)
-        {
-
-            return true;
-
-
-        }
-
 
         public Boolean SupprimerLivre(string titre)
         {
@@ -92,5 +84,11 @@ namespace Gestion_Livres
 
 
         }
+        public Boolean SupprimerLivreAuteur(string aut)
+        {
+            return true;
+
+        }
+
     }
 }

@@ -19,14 +19,14 @@ class Program
 
             Console.WriteLine(bi);
             Console.ReadKey();
-            bi.AfficheAuteur("Victor Hugo");
+            bi.AfficheParAuteur("Victor Hugo");
             Console.ReadKey();
-            bi.AfficheEditeur("poche");
+            bi.AfficheParEditeur("poche");
             Console.ReadKey();
             bi.SupprimerLivre("Desert");
             Console.WriteLine(bi);
             Console.ReadKey();
-            bi.SupprimerAuteur("Victor Hugo");
+            bi.SupprimerLivreAuteur("Victor Hugo");
             Console.WriteLine(bi);
             Console.ReadKey();
 
